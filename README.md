@@ -15,7 +15,7 @@ Install Gazebo 11 using the following command:
 ```sh
 curl -sSL http://get.gazebosim.org | sh
 ```
-Alternaatively, you can refer to the official [website](https://classic.gazebosim.org/tutorials?tut=install_ubuntu) of Gazebo for installation steps
+Alternatively, you can refer to the official [website](https://classic.gazebosim.org/tutorials?tut=install_ubuntu) of Gazebo for installation steps
 
 ### Setup Micro XRCE-DDS Agent & Client 
 Enter the following commands in a new terminal to build the agent.
