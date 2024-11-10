@@ -209,7 +209,8 @@ git clone https://github.com/PX4/px4_msgs.git -b release/1.14
 #This is for the keyboard  control of the drone 
 git clone https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example.git
 ```
-Also copy the `motor_failure_detection` folder to the `src` directory 
+Also copy the `motor_failure_detection` folder to the `src` directory.
+
 Replace the script at `~/ros2_px4_offboard_example_ws/src/ROS2_PX4_Offboard_Example/px4_offboard/px4_offboard/processes.py` with the following:
 
 ```python
