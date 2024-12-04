@@ -76,7 +76,7 @@ Also add a `velocity_decay` block before the end of the `</link>` tag for `base_
 The complete `jinja` file can be found in the zip folder, you can paste it at `PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models/iris/iris.sdf.jinja` for implementing the necessary changes.
 
 ##### Modifications to `HealthAndArmingChecks.cpp`
-This file is located at `PX4-Autopilot/src/modules/commander/HealthAndArmingChecks/HealthAndArmingChecks.cpp` and what it does is check for various health and safety parameters and act accordingly. We simply skip the checking process and allow the other parts of the code to act as normal. Simply comment out the for loops like so:
+This file is located at `PX4-Autopilot/src/modules/commander/HealthAndArmingChecks/HealthAndArmingChecks.cpp` and what it does is check for various health and safety parameters and act accordingly. We simply skip the checking process and allow the other parts of the code to act as normal. Simply comment out the `for` loops like so:
 ```cpp
 bool HealthAndArmingChecks::update(bool force_reporting, bool is_arming_request)
 {
@@ -183,8 +183,6 @@ std::array<double, 3> rotateVector(const std::array<double, 3>& v, const Quatern
     return {result.x, result.y, result.z};
 }
 ```
+The core algorithm used in the landing is described in the report, but in a nutshell, the algorithm consists of multiple `P(Proportional)`, `PD(Proportional and Derivative)`, and `PID (Proportional, Intrgral and Derivative)` controllers which adjust the `actuator output` values for controlled descent.
+
 Both the `SimulatorMavlink.cpp` and `SimulatorMavlink.hpp` files can be found in the zip and should be replaced with the corresponding  `.cpp` and `.hpp` files located at `PX4-Autopilot/src/modules/simulation/simulator_mavlink/` to enable landing functionality after motor failure.
-```cpp
-```
-
-
