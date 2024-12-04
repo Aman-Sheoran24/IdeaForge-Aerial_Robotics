@@ -1,4 +1,4 @@
-# Failure Detection in PX4 Stack and Initial Stabilization 
+# Failure Detection in PX4 Stack and Landing 
 >_This document assumes that you have already implemented the motor failure plugin and have setup PX4, ROS2 and  XRCE-DDS bridge_
 ### Integrating Failure Detection in PX4 stack
 Our algorithm for detecting motor failure uses gyroscope and accelerometer data. Earlier, we had a ROS2 node that subscribed to the `/fmu/out/sensor_combined` topic on the bridge and ran the failure detection algorithm.
